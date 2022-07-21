@@ -47,24 +47,14 @@ const serviceSchema: ServiceSchema = {
         // search: { type: 'string', optional: true },
         CREATE_BY_NAME: { type: "string", optional: true },
         UPDATE_BY_NAME: { type: "string", optional: true },
-        orders: {
+        sorters: {
           type: "array",
           optional: true,
           items: {
             type: "object",
             props: {
-              column: { type: "string", empty: false },
+              field: { type: "string", empty: false },
               dir: { type: "string", empty: false },
-            },
-          },
-        },
-        columns: {
-          type: "array",
-          optional: true,
-          items: {
-            type: "object",
-            props: {
-              data: { type: "string", empty: false },
             },
           },
         },
@@ -93,24 +83,14 @@ const serviceSchema: ServiceSchema = {
         // search: { type: 'string', optional: true },
         CREATE_BY_NAME: { type: "string", optional: true },
         UPDATE_BY_NAME: { type: "string", optional: true },
-        orders: {
+        sorters: {
           type: "array",
           optional: true,
           items: {
             type: "object",
             props: {
-              column: { type: "string", empty: false },
+              field: { type: "string", empty: false },
               dir: { type: "string", empty: false },
-            },
-          },
-        },
-        columns: {
-          type: "array",
-          optional: true,
-          items: {
-            type: "object",
-            props: {
-              data: { type: "string", empty: false },
             },
           },
         },

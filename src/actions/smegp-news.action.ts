@@ -62,12 +62,13 @@ const getNews: ActionSchema = {
 
     let orderStr: { [key: string]: any } = {};
     let secondDir = 1;
-    if (context.params.orders !== undefined && context.params.orders.length > 0) {
+    if (context.params.sorters !== undefined && context.params.sorters.length > 0) {
       var dir = 1;
-      var sortingCol = context.params.columns[Number(context.params.orders[0].column)].data;
-      if (context.params.orders[0].dir == "desc") dir = -1;
-      orderStr[sortingCol] = dir;
-      orderStr["_id"] = secondDir;
+      for(let i = 0; i < context.params.sorters.length; i++){
+        if (context.params.sorters[i].dir == "desc")
+          dir = -1;
+        orderStr[context.params.sorters[i].field] = dir;
+      }
     } else {
       orderStr["_id"] = secondDir;
     }
