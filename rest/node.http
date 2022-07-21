@@ -1,0 +1,30 @@
+@authUrl =  https://xxxxx
+@serviceUrl = http://localhost:3000
+@kc_client = xxxxxx
+@apikey = xxxxxxxxxxxxxxx
+
+### Get projects
+//GET {{apiUrl}}/logbook/getProjects HTTP/1.1
+
+### Step 1: Reporter Log in
+# @name reporter_token
+POST {{authUrl}}/realms/master/protocol/openid-connect/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=test
+&password=test
+&client_id={{kc_client}}
+&grant_type=password
+
+####
+POST {{serviceUrl}}/tpmaplogbook/tpmap/houselist HTTP/1.1
+Authorization: Bearer {{reporter_token.response.body.$.access_token}}
+APIKEY: {{apikey}}
+Content-Type: application/json
+
+{
+    "tam":"750201",
+    "draw":"10",
+    "length":"10",
+    "start":"0"
+}

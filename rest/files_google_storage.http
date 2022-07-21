@@ -1,0 +1,9 @@
+@serviceUrl = http://localhost:3000/smegp/
+
+
+### Upload
+# @name document
+POST {{serviceUrl}}internal/files/EGP_VENDOR_PROFILE.csv HTTP/1.1
+Content-Type: text/csv
+
+< /Users/chaiyaphum/Downloads/EGP_VENDOR_PROFILE.csv

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./target",
+    "paths": {
+      "@actions/*": ["actions/*"],
+      "@mixins/*": ["mixins/*"],
+      "@services/*": ["services/*"],
+      "@stores/*": ["services/stores/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "removeComments": true,
+    "rootDir": "./",
+    "sourceMap": true,
+    "strict": false,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "ES2018",
+    "types": ["node", "jest"]
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "clean",
+        "type": "shell",
+        "command": "./node_modules/.bin/rimraf",
+        "args": ["${workspaceFolder}/target", "${workspaceFolder}/test-results"],
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "dedicated"
+        },
+        "problemMatcher": []
+      },
+    ]
+}
